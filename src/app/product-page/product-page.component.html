@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<section class="section gallery">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h1 class="font-weight-bold">Tất cả đồng hồ thông minh</h1>
+        </div>
+        
+        <div *ngFor="let product of products; index as i" class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="block">
+            <div class="gallery-overlay">
+              <a routerLink="/product/{{product.id}}" class="gallery-popup">
+                <i class="tf-ion-plus-round"></i>
+              </a>
+            </div>
+            <img class="img-fluid" [src]="product.img" alt="Apple Watch">
+          </div>
+          <div class="product-info">
+          <h4 class="mb-2"><a routerLink="/product/{{product.id}}" class="link-title">{{product.name}}</a></h4>
+          <p class="price">${{product.price}}
+            <s class="price">$30.00</s>
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <app-footer></app-footer>

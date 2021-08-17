@@ -1,0 +1,48 @@
+<app-navbar></app-navbar>
+<section class="section">
+  <div class="container">
+    <div class="row ">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h2 class="font-weight-bold mb-4">Quản lý sản phẩm</h2>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <button type="button" class="btn btn-sm btn-outline-primary" routerLink="/admin/product-add">
+                    Thêm sản phẩm
+                  </button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table  table-sm">
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Ảnh</th>
+                  <th>Tên</th>
+                  <th>Giá</th>
+                  <!-- <th>Tình trạng</th> -->
+                  <th>Mô tả</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let product of products; index as i">
+                  <td>{{i + 1}}</td>
+                  <td><img [src]="product.img" width="50" /></td>
+                  <td>{{product.name}}</td>
+                  <td>{{product.price}}</td>
+                  <!-- <td>{{product.status ? 'Còn hàng': 'Hết hàng'}}</td> -->
+                  <td>{{product.desc}}</td>
+                  <td width="200">
+                    <button class="btn btn-primary" (click)="removeItem(product.id)">
+                        Delete
+                      </button>
+                    <button class="btn btn-info ms-2" routerLink="/admin/product/{{product.id}}/edit">
+                        Edit
+                      </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+  </div>
+</section>

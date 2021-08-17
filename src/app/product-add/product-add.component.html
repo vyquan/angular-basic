@@ -1,0 +1,66 @@
+<app-navbar></app-navbar>
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <h2 class="font-weight-bold mb-4">Thêm sản phẩm</h2>
+        <form action="" method="POST" class="mt-3">
+          <div class="mb-3">
+            <label for="" class="form-label">Tên sản phẩm</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="product.name"
+              placeholder="Nhập tên sản phẩm"
+              name="name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Giá sản phẩm</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="product.price"
+              placeholder="Nhập giá"
+              name="price"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Ảnh</label>
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="product.img"
+              placeholder="ảnh"
+              name="img"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Thông tin sản phẩm</label>
+            <input [(ngModel)]="product.desc" name="desc" id="desc" class="form-control mb-2" placeholder="Nhập thông tin" required>
+          </div>
+          <button class="btn btn-primary" (click)="onAddProduct()">
+            Thêm sản phẩm
+          </button>
+          <a class="btn btn-info"routerLink="/admin/product-list">
+            Huỷ
+          </a>
+        </form>
+        <!-- <form action="#" method="POST" class="row">
+          <div class="col-lg-6 mb-3">
+            <input type="text" class="form-control mb-2" id="name" name="name" placeholder="Nhập tên" required>
+          </div>
+          <div class="col-lg-6 mb-3">
+            <input type="email" class="form-control mb-2" id="email" name="email" placeholder="Nhập email" required>
+          </div>
+          <div class="col-12 mb-3">
+            <textarea name="message" id="message" class="form-control mb-2" placeholder="Nhập tin nhắn" required></textarea>
+          </div>
+          <div class="col-12 text-right">
+            <button type="submit" value="send" (click)="onAddProduct()" class="btn btn-main btn-main-sm">Gửi</button>
+          </div>
+        </form> -->
+      </div>
+    </div>
+  </div>
+</section>

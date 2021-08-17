@@ -1,0 +1,48 @@
+<app-header></app-header>
+
+<section class="section" *ngIf="product">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 mb-4 mb-md-0">
+  
+          <div class="product-image-slider">
+  
+            <div data-image="https://firebasestorage.googleapis.com/v0/b/angular-78b50.appspot.com/o/img%2Fshowcase-1.png?alt=media&token=b4362167-6cfb-47e2-ae6b-595a11a3e1c7">
+              <img class="img-fluid w-100" [src]="product.img" alt="product-image">
+            </div>
+  
+            <!-- <div data-image="https://firebasestorage.googleapis.com/v0/b/angular-78b50.appspot.com/o/img%2Fshowcase-2.png?alt=media&token=96cbf49c-bdca-4ae4-a1de-1a59b6f1b12e">
+              <img class="img-fluid w-100" src="https://firebasestorage.googleapis.com/v0/b/angular-78b50.appspot.com/o/img%2Fshowcase-2.png?alt=media&token=96cbf49c-bdca-4ae4-a1de-1a59b6f1b12e" alt="product-image">
+            </div>
+  
+            <div data-image="https://firebasestorage.googleapis.com/v0/b/angular-78b50.appspot.com/o/img%2Fshowcase-3.png?alt=media&token=75e669c5-0fe7-4fb7-9511-1b47528e0854">
+              <img class="img-fluid w-100" src="https://firebasestorage.googleapis.com/v0/b/angular-78b50.appspot.com/o/img%2Fshowcase-3.png?alt=media&token=75e669c5-0fe7-4fb7-9511-1b47528e0854" alt="product-image">
+            </div>
+  
+            <div data-image="https://firebasestorage.googleapis.com/v0/b/angular-78b50.appspot.com/o/img%2Fshowcase-4.png?alt=media&token=eb2c6859-01d9-4890-acbe-f5c77a182200">
+              <img class="img-fluid w-100" src="https://firebasestorage.googleapis.com/v0/b/angular-78b50.appspot.com/o/img%2Fshowcase-4.png?alt=media&token=eb2c6859-01d9-4890-acbe-f5c77a182200" alt="product-image">
+            </div>
+   -->
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-7 offset-lg-1">
+          <h1 class="mb-4">{{product.name}}</h1>
+          <p><strong>Màu: </strong>Black, White, Gray</p>
+          <p><strong>Trạng thái: </strong>{{product.status ? 'Còn hàng': 'Hết hàng'}}</p>
+          <p class="price py-4">${{product.price}}
+            <s class="price">$30.00</s>
+          </p>
+          <button class="snipcart-add-item btn btn-main mb-5" data-item-id="apple-watch__25.00"
+            data-item-name="Apple Watch" data-item-image="images/showcase/showcase-1.png" data-item-price="25.00"
+            data-item-url="products/product-1/" data-item-custom1-name="Choose Color"
+            data-item-custom1-options="Black|White|Gray" data-item-custom2-name="Choose Size"
+            data-item-custom2-options="Small|Medium|Large">Thêm vào giỏ hàng
+          </button>
+          <div class="content">
+            <p>{{product.desc}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-footer></app-footer>
